@@ -1,8 +1,8 @@
 package chess.movement;
 
 
-import chess.ChessBoard;
-import chess.Tile;
+import chess.core.ChessBoard;
+import chess.core.Tile;
 import chess.utils.ChessConstants;
 import chess.utils.ChessErrorMessages;
 

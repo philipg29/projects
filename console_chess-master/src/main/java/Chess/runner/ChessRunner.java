@@ -4,8 +4,8 @@ import chess.movement.UserInputHandler;
 
 import java.util.Scanner;
 
-import chess.ChessCordinator;
-import chess.Tuple;
+import chess.core.ChessCordinator;
+import chess.core.Tuple;
 import chess.utils.ChessErrorMessages;
 import chess.utils.ChessInformativeMessages;
 

@@ -4,7 +4,7 @@ package chess.movement;
 import chess.utils.ChessConstants;
 import java.util.regex.Matcher;
 
-import chess.Tuple;
+import chess.core.Tuple;
 
 
 public final class UserInputHandler

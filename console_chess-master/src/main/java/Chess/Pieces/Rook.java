@@ -1,8 +1,8 @@
 package chess.pieces;
 
 
-import chess.ChessPiece;
-import chess.Move;
+import chess.core.ChessPiece;
+import chess.core.Move;
 
 
 public final class Rook
