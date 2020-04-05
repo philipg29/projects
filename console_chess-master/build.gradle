@@ -1,0 +1,36 @@
+apply plugin: 'java'
+apply plugin: 'application'
+
+repositories { jcenter() }
+
+dependencies {
+    compile 'junit:junit:4.12'
+    testCompile 'junit:junit:4.12'
+}
+
+sourceSets {
+    main {
+        java { srcDir 'src' }
+    }
+    test {
+        java { srcDir 'src' }
+    }
+}
+jar {
+    baseName = 'ConsoleChess'
+    manifest {
+        attributes(
+            'Main-Class': 'Program')
+    }
+}
+
+test {
+    testLogging.showStandardStreams = true
+}
+
+run {
+    standardInput = System.in
+}
+
+
+mainClassName = 'Program'
