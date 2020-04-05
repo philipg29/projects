@@ -1,23 +1,49 @@
-package Chess;
+package chess;
+
 
 /**
  * Used to store an int/int pair to map to tiles on the chessboard.
  */
-public class Tuple {
-    private final int x;
-    private final int y;
+public final class Tuple
+{
+    // x cordinate position
+    private final int xPosition;
+    // y cordinate position
+    private final int yPosition;
 
-    public Tuple(int x, int y){
-            this.x = x;
-            this.y =y;
+
+    /**
+     * Creates chess tuple
+     *
+     * @param xPosition - x cordinate position
+     * @param yPosition - y cordinate position
+     */
+    public Tuple(final int xPosition, final int yPosition)
+    {
+        this.xPosition = xPosition;
+        this.yPosition = yPosition;
     }
 
-    public int X(){
-        return x;
+
+    /**
+     * Retrieves the x cordinate position
+     *
+     * @return xPosition
+     */
+    public int getXposition()
+    {
+        return xPosition;
     }
 
-    public int Y(){
-        return y;
+
+    /**
+     * Retrieves the y cordinate position
+     *
+     * @return yPosition
+     */
+    public int getYposition()
+    {
+        return yPosition;
     }
 
 }

@@ -1,45 +1,92 @@
-package Chess;
+package chess;
 
 
-public class Tile {
+public final class Tile
+{
 
+    // represents the chess piece
     private ChessPiece piece;
+    // represents the colour of the tile
     private final TileColor color;
 
-    public enum TileColor{
+    public enum TileColor
+    {
         White, Black
     }
 
-    public Tile(TileColor color){
+
+    /**
+     * @param color - set tile colour
+     */
+    public Tile(final TileColor color)
+    {
         this.color = color;
     }
 
-    public Tile(TileColor color, ChessPiece piece){
+
+    /**
+     * @param color - colour of the chess piece
+     * @param piece - the piece that corresponds to a tile
+     */
+    public Tile(final TileColor color,final  ChessPiece piece)
+    {
         this.color = color;
         this.piece = piece;
     }
 
-    public void setPiece(ChessPiece piece){
+
+    /**
+     * @param piece - sets piece on tile
+     */
+    public void setPiece(final ChessPiece piece)
+    {
         this.piece = piece;
     }
 
-    public ChessPiece getPiece(){
-        return this.piece;
+
+    /**
+     * Returns the chess piece
+     *
+     * @return piece
+     */
+    public ChessPiece getPiece()
+    {
+        return piece;
     }
 
-    public String getValue(){
-        if(piece != null){
-            return "[" + piece.getCharValue() + "]";
-        } else {
-            return "[ ]";
+
+    /**
+     * @return pieceInformation - information about the piece
+     */
+    public String getPieceValue()
+    {
+        String pieceInformation = null;
+        if (piece != null)
+        {
+            pieceInformation = "[" + piece.getCharValue() + "]";
         }
+        else
+        {
+            pieceInformation = "[ ]";
+        }
+        return pieceInformation;
     }
 
-    public boolean isEmpty(){
+
+    /**
+     * @return is the tile empty
+     */
+    public boolean isEmpty()
+    {
         return piece == null;
     }
 
-    public void empty(){
+
+    /**
+     * Clear the tile
+     */
+    public void setEmpty()
+    {
         piece = null;
     }
 }

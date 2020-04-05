@@ -1,6 +1,8 @@
-package Chess;
+package chess;
 
-public abstract class ChessPiece {
+
+public abstract class ChessPiece
+{
     private final PieceType type;
     private final PieceColor color;
     private final Move[] moves;
@@ -8,7 +10,19 @@ public abstract class ChessPiece {
     private final char charValue;
     private final boolean repeatableMoves;
 
-    protected ChessPiece(PieceType type, PieceColor color, Move[] moves, boolean repeatableMoves){
+    public enum PieceType
+    {
+        Pawn, Rook, Knight, Bishop, Queen, King
+    }
+
+    public enum PieceColor
+    {
+        White, Black
+    }
+
+
+    public ChessPiece(final PieceType type,final  PieceColor color,final  Move[] moves, boolean repeatableMoves)
+    {
         this.type = type;
         this.color = color;
         this.moves = moves;
@@ -17,26 +31,45 @@ public abstract class ChessPiece {
         charValue = type.name().trim().charAt(0);
     }
 
-    public enum PieceType {
-        Pawn, Rook, Knight, Bishop, Queen, King
+
+    public Move[] getMoves()
+    {
+        return moves;
     }
 
-    public enum PieceColor {
-        White, Black
+
+    public String getName()
+    {
+        return name;
     }
-    public Move[] getMoves(){ return moves; }
 
-    public String getName(){ return name; }
 
-    public PieceColor getColor(){ return color; }
+    public PieceColor getColor()
+    {
+        return color;
+    }
 
-    public char getCharValue(){ return charValue; }
 
-    public boolean hasRepeatableMoves(){ return repeatableMoves; }
+    public char getCharValue()
+    {
+        return charValue;
+    }
 
-    public PieceType getPieceType() {return type; }
 
-    public static PieceColor opponent(PieceColor color) {
+    public boolean isRepeatableMove()
+    {
+        return repeatableMoves;
+    }
+
+
+    public PieceType getPieceType()
+    {
+        return type;
+    }
+
+
+    public static PieceColor getColour(final PieceColor color)
+    {
         return (color == PieceColor.Black) ? PieceColor.White : PieceColor.Black;
     }
 
