@@ -1,6 +1,5 @@
 package chess.movement;
 
-
 import chess.utils.ChessConstants;
 import java.util.regex.Matcher;
 

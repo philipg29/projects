@@ -3,8 +3,6 @@ package chess.core;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import chess.core.*;
 import chess.core.ChessPiece.PieceColor;
 import chess.core.ChessPiece.PieceType;
 import chess.utils.ChessConstants;

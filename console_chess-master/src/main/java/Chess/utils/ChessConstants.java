@@ -7,7 +7,6 @@
  */
 package chess.utils;
 
-
 import java.util.regex.Pattern;
 
 

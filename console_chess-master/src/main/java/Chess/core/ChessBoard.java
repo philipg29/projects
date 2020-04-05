@@ -2,7 +2,6 @@ package chess.core;
 
 
 import chess.utils.ChessConstants;
-
 import java.util.ArrayList;
 import java.util.List;
 import chess.pieces.*;

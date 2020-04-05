@@ -1,9 +1,8 @@
 package chess.runner;
+
 import chess.movement.BoardDisplay;
 import chess.movement.UserInputHandler;
-
 import java.util.Scanner;
-
 import chess.core.ChessCordinator;
 import chess.core.Tuple;
 import chess.utils.ChessErrorMessages;

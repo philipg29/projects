@@ -1,6 +1,5 @@
 package chess.movement;
 
-
 import chess.core.ChessBoard;
 import chess.core.Tile;
 import chess.utils.ChessConstants;
